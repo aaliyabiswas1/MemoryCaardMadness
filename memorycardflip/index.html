@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match Madness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div class="container" id="introScreen">
+        <h1>🎉 Memory Match Madness 🎉</h1>
+        <p class="tagline">✨🧠 Match the cards • Beat the clock • Have fun ✨</p>
+        <button class="play-button" id="startButton">Play Game 🎮</button>
+
+        <!-- Floating emojis for decoration -->
+        <div class="emoji" style="top: 10%; left: 20%;">🧠</div>
+        <div class="emoji" style="top: 30%; right: 15%;">🎈</div>
+        <div class="emoji" style="bottom: 20%; left: 10%;">🎮</div>
+        <div class="emoji" style="bottom: 25%; right: 30%;">🍭</div>
+        <div class="emoji" style="top: 60%; left: 50%;">🧩</div>
+    </div>    <!-- Game Screen -->
+    <div class="game-area" id="gameArea">
+        <div class="stats">
+            <div>⏱ Time: <span id="timer">0</span>s</div>
+            <div>🧠 Moves: <span id="moves">0</span></div>
+        </div>
+        <div class="game-board" id="gameBoard"></div>
+        <button class="restart-btn" onclick="resetGame()">🔄 Restart</button>
+    </div>
+
+    <!-- Decorative Emojis -->
+    <div class="emoji-decor">🎈</div>
+    <div class="emoji-decor">🎮</div>
+    <div class="emoji-decor">🎉</div>
+    <div class="emoji-decor">🍭</div>
+
+    <!-- Win Modal -->
+    <div class="modal" id="winModal">
+        <div class="modal-content">
+            <h2>🎉 Congratulations!</h2>
+            <p>You've matched all the cards!</p>
+            <div class="stats">
+                Time: <span id="finalTime">0</span>s<br>
+                Moves: <span id="finalMoves">0</span>
+            </div>
+            <div class="modal-buttons">
+                <button id="playAgainButton">Play Again 🔄</button>
+                <button id="homeButton">Home 🏠</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
